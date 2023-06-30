@@ -1,7 +1,7 @@
 import { HStack, Box, Icon } from "@chakra-ui/react";
-import SearchInput from "./SearchInput";
 import { FaMobileAlt } from "react-icons/fa";
 import React from "react";
+import SearchInput from "./SearchInput";
 
 const NavBar = () => {
   return (
