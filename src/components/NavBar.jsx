@@ -1,15 +1,14 @@
-import { HStack, Box, Icon } from "@chakra-ui/react";
+import { HStack, Box, Icon, Heading } from "@chakra-ui/react";
 import { FaMobileAlt } from "react-icons/fa";
 import React from "react";
-import SearchInput from "./SearchInput";
 
 const NavBar = () => {
   return (
-    <HStack padding="10px">
+    <HStack padding="30px">
       <Box boxSize="60px">
         <Icon as={FaMobileAlt} w="100%" h="100%" />
       </Box>
-      <SearchInput />
+      <Heading>PhoneZone - Listado móviles</Heading>
     </HStack>
   );
 };

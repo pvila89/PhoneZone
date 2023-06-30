@@ -10,8 +10,6 @@ class ApiClient {
   }
 
   getAll() {
-    console.log("hola");
-    console.log(this.endpoint);
     return axiosInstance.get(this.endpoint).then(res => res.data);
   }
 
