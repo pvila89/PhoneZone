@@ -10,9 +10,14 @@ PhoneZone is a React-based Single Page Application (SPA) designed to provide a s
 
 
 ## Installation
-1. Clone this repository to your local machine using the following command:
-2. Navigate to the project directory
-3. Install the necessary dependencies: npm install
-4. Start the application in your local development environment: npm run dev
+
+1. Clone this repository to your local machine.
+2. Run the command `npm install` to install the dependencies.
+3. Run the command `npm run dev` to start the application in your local development environment.
+
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact us at [pvila89@gmail.com].
 
 
