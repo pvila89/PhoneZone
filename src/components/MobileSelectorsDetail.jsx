@@ -1,7 +1,7 @@
-import React from "react";
 import { Box, Button, HStack } from "@chakra-ui/react";
 import StorageSelector from "./StorageSelector";
 import ColorSelector from "./ColorSelector";
+import PropTypes from "prop-types";
 
 const MobileSelectorsDetail = ({
   mobile,
@@ -37,6 +37,20 @@ const MobileSelectorsDetail = ({
       </HStack>
     </Box>
   );
+};
+
+MobileSelectorsDetail.propTypes = {
+  mobile: PropTypes.shape({
+    options: PropTypes.shape({
+      storages: PropTypes.arrayOf(PropTypes.object),
+      colors: PropTypes.arrayOf(PropTypes.object),
+    }).isRequired,
+  }).isRequired,
+  handleAddToCart: PropTypes.func.isRequired,
+  setSelectedColor: PropTypes.func.isRequired,
+  setSelectedStorage: PropTypes.func.isRequired,
+  selectedStorage: PropTypes.string,
+  selectedColor: PropTypes.string,
 };
 
 export default MobileSelectorsDetail;

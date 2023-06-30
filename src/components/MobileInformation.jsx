@@ -1,5 +1,5 @@
 import { Text, Box } from "@chakra-ui/react";
-import React from "react";
+import PropTypes from "prop-types";
 
 const MobileInformation = ({ mobile }) => {
   return (
@@ -17,6 +17,22 @@ const MobileInformation = ({ mobile }) => {
       <Text>{mobile.weight}</Text>
     </Box>
   );
+};
+
+MobileInformation.propTypes = {
+  mobile: PropTypes.shape({
+    brand: PropTypes.string,
+    model: PropTypes.string,
+    price: PropTypes.number,
+    cpu: PropTypes.string,
+    ram: PropTypes.string,
+    os: PropTypes.string,
+    displaySize: PropTypes.string,
+    battery: PropTypes.string,
+    primaryCamera: PropTypes.string,
+    dimentions: PropTypes.string,
+    weight: PropTypes.string,
+  }).isRequired,
 };
 
 export default MobileInformation;

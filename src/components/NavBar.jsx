@@ -2,10 +2,7 @@ import { HStack, Box, Icon, Heading, Badge } from "@chakra-ui/react";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
-
 import useMobileStore from "../store";
-
-import React from "react";
 
 const NavBar = () => {
   const cartItemsCount = useMobileStore((state) => state.cartItems);

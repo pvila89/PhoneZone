@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import useMobiles from "../hooks/useMobiles";
 import { SimpleGrid, Box } from "@chakra-ui/react";
 import MobileCard from "./MobileCard";
@@ -8,7 +8,7 @@ import SearchInput from "./SearchInput";
 
 const MobilesList = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const { data, isLoading, error } = useMobiles(searchTerm);
+  const { data, isLoading } = useMobiles(searchTerm);
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
   const handleSearch = (newSearchTerm) => {

@@ -1,5 +1,5 @@
-import React from "react";
 import { Box } from "@chakra-ui/react";
+import PropTypes from "prop-types";
 
 const MobileCardContainer = ({ children }) => {
   return (
@@ -14,6 +14,10 @@ const MobileCardContainer = ({ children }) => {
       {children}
     </Box>
   );
+};
+
+MobileCardContainer.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default MobileCardContainer;

@@ -1,6 +1,6 @@
-import React from "react";
 import { BsChevronBarDown } from "react-icons/bs";
 import { Menu, MenuButton, MenuList, Button, MenuItem } from "@chakra-ui/react";
+import PropTypes from "prop-types";
 
 const StorageSelector = ({ storages, selectedItem, onSelect }) => {
   const selectedValue = storages.length === 1 ? storages[0] : selectedItem;
@@ -19,6 +19,20 @@ const StorageSelector = ({ storages, selectedItem, onSelect }) => {
       </MenuList>
     </Menu>
   );
+};
+
+StorageSelector.propTypes = {
+  storages: PropTypes.arrayOf(
+    PropTypes.shape({
+      code: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  selectedItem: PropTypes.shape({
+    code: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }),
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default StorageSelector;

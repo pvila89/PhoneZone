@@ -1,5 +1,5 @@
-import React from "react";
 import { Box, Image } from "@chakra-ui/react";
+import PropTypes from "prop-types";
 
 const MobileImageDetail = ({ imgUrl }) => {
   return (
@@ -13,6 +13,10 @@ const MobileImageDetail = ({ imgUrl }) => {
       />
     </Box>
   );
+};
+
+MobileImageDetail.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
 };
 
 export default MobileImageDetail;

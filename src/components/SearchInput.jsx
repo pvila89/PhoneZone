@@ -1,6 +1,7 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const SearchInput = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");
@@ -12,7 +13,9 @@ const SearchInput = ({ onSearch }) => {
 
   return (
     <InputGroup>
-      <InputLeftElement children={<BsSearch />} />
+      <InputLeftElement>
+        <BsSearch />
+      </InputLeftElement>
       <Input
         borderRadius={20}
         placeholder="Buscar móviles..."
@@ -22,6 +25,10 @@ const SearchInput = ({ onSearch }) => {
       />
     </InputGroup>
   );
+};
+
+SearchInput.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default SearchInput;

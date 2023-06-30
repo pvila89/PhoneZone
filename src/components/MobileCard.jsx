@@ -7,8 +7,8 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
-import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const MobileCard = ({ mobile }) => {
   const color = mobile.price !== "" ? "green" : "red";
@@ -53,6 +53,16 @@ const MobileCard = ({ mobile }) => {
       </CardBody>
     </Card>
   );
+};
+
+MobileCard.propTypes = {
+  mobile: PropTypes.shape({
+    price: PropTypes.string,
+    id: PropTypes.string,
+    brand: PropTypes.string,
+    model: PropTypes.string,
+    imgUrl: PropTypes.string,
+  }).isRequired,
 };
 
 export default MobileCard;
