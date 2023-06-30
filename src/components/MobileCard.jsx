@@ -1,15 +1,14 @@
-import React from "react";
 import {
+  Badge,
+  Box,
   Card,
   CardBody,
-  HStack,
   Grid,
   Heading,
   Image,
-  Text,
-  Box,
-  Badge,
 } from "@chakra-ui/react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const MobileCard = ({ mobile }) => {
   const color = mobile.price !== "" ? "green" : "red";
@@ -33,8 +32,10 @@ const MobileCard = ({ mobile }) => {
             gridRow="1 / span 2"
           >
             <Box>
-              <Heading fontSize="2xl" mb={2}>
-                {mobile.brand + " " + mobile.model}
+              <Heading fontSize={20}>
+                <Link to={"/mobiles/" + mobile.id}>
+                  {mobile.brand + " " + mobile.model}
+                </Link>
               </Heading>
             </Box>
             <Box display="flex" justifyContent="flex-end" mt="auto">
