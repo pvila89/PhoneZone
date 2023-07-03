@@ -2,6 +2,7 @@ import { Box, Button, Icon } from "@chakra-ui/react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import React from "react";
 
 const BackButton = ({ handleAddToCart }) => {
   return (

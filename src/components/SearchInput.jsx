@@ -2,6 +2,7 @@ import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import { useState } from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 const SearchInput = ({ onSearch }) => {
   const [searchText, setSearchText] = useState("");

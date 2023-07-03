@@ -2,6 +2,7 @@ import { Box, Button, HStack } from "@chakra-ui/react";
 import StorageSelector from "./StorageSelector";
 import ColorSelector from "./ColorSelector";
 import PropTypes from "prop-types";
+import React from "react";
 
 const MobileSelectorsDetail = ({
   mobile,
@@ -17,12 +18,12 @@ const MobileSelectorsDetail = ({
         <StorageSelector
           storages={mobile.options.storages}
           onSelect={setSelectedStorage}
-          selectedItem={selectedStorage}
+          selectedItem={selectedStorage || {}}
         />
         <ColorSelector
           colors={mobile.options.colors}
           onSelect={setSelectedColor}
-          selectedItem={selectedColor}
+          selectedItem={selectedColor || {}}
         />
         <Button
           fontWeight="bold"
@@ -49,8 +50,8 @@ MobileSelectorsDetail.propTypes = {
   handleAddToCart: PropTypes.func.isRequired,
   setSelectedColor: PropTypes.func.isRequired,
   setSelectedStorage: PropTypes.func.isRequired,
-  selectedStorage: PropTypes.string,
-  selectedColor: PropTypes.string,
+  selectedStorage: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  selectedColor: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 };
 
 export default MobileSelectorsDetail;

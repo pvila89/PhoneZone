@@ -1,5 +1,6 @@
 import { Text, Box } from "@chakra-ui/react";
 import PropTypes from "prop-types";
+import React from "react";
 
 const MobileInformation = ({ mobile }) => {
   return (
@@ -23,13 +24,13 @@ MobileInformation.propTypes = {
   mobile: PropTypes.shape({
     brand: PropTypes.string,
     model: PropTypes.string,
-    price: PropTypes.number,
+    price: PropTypes.string,
     cpu: PropTypes.string,
     ram: PropTypes.string,
     os: PropTypes.string,
     displaySize: PropTypes.string,
     battery: PropTypes.string,
-    primaryCamera: PropTypes.string,
+    primaryCamera: PropTypes.arrayOf(PropTypes.string),
     dimentions: PropTypes.string,
     weight: PropTypes.string,
   }).isRequired,

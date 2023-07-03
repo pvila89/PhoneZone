@@ -1,5 +1,6 @@
 import { Box, Image } from "@chakra-ui/react";
 import PropTypes from "prop-types";
+import React from "react";
 
 const MobileImageDetail = ({ imgUrl }) => {
   return (

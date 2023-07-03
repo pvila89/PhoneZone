@@ -1,6 +1,7 @@
 import { BsChevronBarDown } from "react-icons/bs";
 import { Menu, MenuButton, MenuList, Button, MenuItem } from "@chakra-ui/react";
 import PropTypes from "prop-types";
+import React from "react";
 
 const ColorSelector = ({ colors, selectedItem, onSelect }) => {
   const selectedValue = colors.length === 1 ? colors[0] : selectedItem;
@@ -24,14 +25,17 @@ const ColorSelector = ({ colors, selectedItem, onSelect }) => {
 ColorSelector.propTypes = {
   colors: PropTypes.arrayOf(
     PropTypes.shape({
-      code: PropTypes.string.isRequired,
+      code: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
-  selectedItem: PropTypes.shape({
-    code: PropTypes.string,
-    name: PropTypes.string,
-  }),
+  selectedItem: PropTypes.oneOfType([
+    PropTypes.exact({}),
+    PropTypes.shape({
+      code: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+  ]),
   onSelect: PropTypes.func.isRequired,
 };
 

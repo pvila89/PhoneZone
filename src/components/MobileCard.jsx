@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import React from "react";
 
 const MobileCard = ({ mobile }) => {
   const color = mobile.price !== "" ? "green" : "red";

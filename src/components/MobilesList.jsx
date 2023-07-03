@@ -5,6 +5,7 @@ import MobileCard from "./MobileCard";
 import MobileCardContainer from "./MobileCardContainer";
 import MobileCardSkeleton from "./MobileCardSkeleton";
 import SearchInput from "./SearchInput";
+import React from "react";
 
 const MobilesList = () => {
   const [searchTerm, setSearchTerm] = useState("");
